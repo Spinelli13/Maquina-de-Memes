@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Styles/style.css" />
+    <link rel="stylesheet" href="/Styles/reset.css" />
+    <title>Máquina de Memes</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="app">
+        <div class="logo">
+          <img src="/Pictures/unnamed.png" alt="" class="logo-dio"/>
+        </div>
+        <div class="app-image">
+          <textarea
+            name=""
+            class="text-box"
+            placeholder="Digite seu meme"
+            aria-multiline="true"
+          ></textarea>
+                    <div id="display-image"></div>
+                    <textarea name=""  class="text-box" placeholder="Digite seu meme" aria-multiline="true"></textarea
+          ></textarea>
+        </div>
+        <div class="app-photo-picker">
+
+            <select name="" id="meme-list">
+                <option value="TROLL">Troll</option>
+            </select>
+
+            <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+        </div>
+        <div class="download">
+            <button id="btn-download">Download</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
