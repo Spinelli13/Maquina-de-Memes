@@ -11,11 +11,11 @@
 
   <body>
     <div class="container">
-      <div class="app">
+      <div class="app" >
         <div class="logo">
-          <img src="/Pictures/unnamed.png" alt="" class="logo-dio"/>
+          <img src="/Pictures/logo.png" alt="" class="logo-dio"/>
         </div>
-        <div class="app-image">
+        <div class="app-image" id="downlabled">
           <textarea
             name=""
             class="text-box"
@@ -28,16 +28,34 @@
         </div>
         <div class="app-photo-picker">
 
-            <select name="" id="meme-list">
-                <option value="TROLL">Troll</option>
+            <select name="" id="memes-list"
+            onchange="changeMemePicture(this.value)">
             </select>
 
-            <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+              <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
         </div>
         <div class="download">
             <button id="btn-download">Download</button>
         </div>
       </div>
     </div>
+
+    <script src="./javascript/scripts.js""></script>
+    <script src="./javascript/html2canvas.js""></script>
+<script>
+
+  document.getElementById("btn-download").onclick = () => {
+const screenshotPrint = document.querySelector("#downlabled")
+
+html2canvas(screenshotPrint).then((canvas)=> {
+const base64Image = canvas.toDataURL("image/png")
+let anchor = document.createElement("a")
+anchor.setAttribute("href", base64Image)
+anchor.setAttribute("download", "mymeme.png")
+anchor.click()
+anchor.remove
+})
+}
+</script>
   </body>
 </html>
