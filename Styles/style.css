@@ -34,7 +34,7 @@ body {
 #display-image {
     width: 100%;
     height: 500px;
-    background-image: url('/Pictures/chapolin.jpg');
+    /* background-image: url('/Pictures/chapolin.jpg'); */
     background-position: center;
     background-size: 100% auto;
     background-repeat: no-repeat;
